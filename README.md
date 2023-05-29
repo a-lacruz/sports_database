@@ -1,4 +1,4 @@
-# Proyecto SQL Comision 43410
+# SQL Comision 43410
 # Proyecto de Base de Datos Deportiva
 
 Este proyecto de Base de Datos Deportiva tiene como objetivo diseñar y crear una base de datos para almacenar información relacionada con deportes, equipos, jugadores, partidos, entre otros elementos relevantes. A continuación se muestra un resumen de lo que se ha realizado hasta ahora.
