@@ -1,35 +1,57 @@
 # SQL Comision 43410
 # Proyecto de Base de Datos Deportiva
 
-Este proyecto de Base de Datos Deportiva tiene como objetivo diseñar y crear una base de datos para almacenar información relacionada con deportes, equipos, jugadores, partidos, entre otros elementos relevantes. A continuación se muestra un resumen de lo que se ha realizado hasta ahora.
+Este proyecto de Base de Datos Deportiva tiene como objetivo diseñar y crear una base de datos para almacenar información relacionada con deportes, equipos, jugadores, partidos y otros elementos relevantes. A continuación se muestra un resumen de lo que se ha realizado hasta ahora.
 
 ## Estructura de la base de datos
 
-El diseño de la base de datos se ha realizado utilizando MySQL Workbench. El script SQL principal que crea las tablas y define las relaciones se encuentra en el archivo `proyect_sports_tables.sql`. Este script ha sido desarrollado considerando las siguientes tablas:
+El diseño de la base de datos se ha realizado utilizando MySQL Workbench. El script SQL principal que crea las tablas y define las relaciones se encuentra en el archivo `proyect_sports_tables V1.4.sql`. La estructura de la DB ha sido desarrollada considerando las siguientes tablas:
 
-1. Posiciones: Almacena las posiciones en un deporte.
-2. Estadios: Contiene información sobre los estadios donde se celebran los eventos deportivos.
-3. Patrocinadores: Registra los patrocinadores de los equipos.
-4. Equipos: Almacena información sobre los equipos participantes.
-5. Jugadores: Contiene información sobre los jugadores de los equipos.
-6. Arbitros: Registra los árbitros que participan en los eventos deportivos.
-7. Temporadas: Almacena información sobre las temporadas en las que se llevan a cabo los eventos.
-8. Eventos: Registra los eventos deportivos, como partidos o competiciones.
-9. Marcadores: Almacena los marcadores de los eventos deportivos.
-10. Partidos: Contiene información sobre los partidos específicos.
-11. PosicionesEquipos: Registra las posiciones de los equipos en cada temporada.
-12. Patrocinios: Almacena los patrocinios de los equipos en cada temporada.
-13. Lesiones: Registra las lesiones sufridas por los jugadores.
-14. Asistencias: Contiene información sobre la asistencia de los jugadores a los partidos.
-15. Contratos: Registra los contratos entre los patrocinadores y los equipos.
+- `Deportes`: Almacena los diferentes deportes disponibles.
+- `PosicionesJugadores`: Registra las posiciones en un deporte.
+- `Estadios`: Contiene información sobre los estadios donde se celebran los eventos deportivos.
+- `Patrocinadores`: Registra los patrocinadores de los equipos.
+- `Equipos`: Almacena información sobre los equipos participantes.
+- `Jugadores`: Contiene información sobre los jugadores de los equipos.
+- `Arbitros`: Registra los árbitros que participan en los eventos deportivos.
+- `Temporadas`: Almacena información sobre las temporadas en las que se llevan a cabo los eventos.
+- `Partidos`: Contiene información sobre los partidos específicos.
+- `Marcadores`: Almacena los marcadores de los eventos deportivos.
+- `Eventos`: Registra los eventos deportivos, como partidos o competiciones.
+- `PosicionesEquipos`: Registra las posiciones de los equipos en cada temporada.
+- `Patrocinios`: Almacena los patrocinios de los equipos en cada temporada.
+- `Lesiones`: Registra las lesiones sufridas por los jugadores.
+- `Contratos`: Registra los contratos entre los patrocinadores y los equipos.
+
+## Vistas
+
+Se han creado las siguientes vistas para facilitar el acceso a la información:
+
+- `InformacionJugadores`: Muestra la información detallada de los jugadores, incluyendo su equipo, posición y deporte.
+- `InformacionPartido`: Muestra la información de los partidos, incluyendo el estadio, temporada y deporte.
+- `InformacionPartidos` (con equipos): Muestra la información de los partidos, incluyendo el estadio, temporada, deporte y los nombres de los equipos local y visitante.
+- `MarcadoresPartidos`: Muestra los marcadores de los partidos, incluyendo el estadio, temporada, deporte, nombres de los equipos locales y visitantes, y los marcadores de cada equipo.
+- `InformacionPatrocinios`: Muestra la información de los patrocinios, incluyendo el nombre del patrocinador, nombre del equipo, deporte y temporada.
+- `InformacionLesiones`: Muestra la información de las lesiones de los jugadores, incluyendo su nombre, apellido, país, posición, deporte y descripción de la lesión.
+
+## Funciones
+
+Se han creado las siguientes funciones para obtener información específica:
+
+- `InfoEquipos(nombre_equipo)`: Devuelve una cadena con la información del equipo indicado en el parametro de entrada, incluyendo su ID, nombre, ciudad y deporte.
+- `InfoJugadorID(jugador_id)`: Devuelve una cadena con la información del jugadorID indicado en el parametro de entrada, incluyendo su nombre, apellido, país, fecha de nacimiento, equipo, posiciónvy deporte.
 
 ## Uso del repositorio
 
 El repositorio contiene los siguientes archivos:
 
-- `proyect_sports_tables.sql`: Script SQL que crea las tablas y define las relaciones de la base de datos.
-- `diagrama_ER.png`: Imagen del diagrama Entidad-Relación (ER) de la base de datos.
-- `readme.md`: Este archivo que proporciona una descripción general del proyecto.
+- `Data_to_import`: Carpeta con archivos *.csv que contienen data para importar como registros dentro de la base de datos.
+- `readme.md`: Este archivo que proporciona una descripción general del proyecto, incluyendo la estructura de la base de datos, vistas, funciones y contacto del autor.
+- `proyect_sportsDER V1.0.png`: Imagen del diagrama Entidad-Relación (ER) de la base de datos.
+- `proyect_sports_data V2.0.sql`: Script SQL para insercion de datos dentro de las tablas especificadas.
+- `proyect_sports_functions V1.0.sql`:Script SQL para la creacion de 2 funciones.
+- `proyect_sports_tables V1.4.sql`: Script SQL que crea las tablas y define las relaciones de la base de datos.
+- `proyect_sports_views V1.0.sql`:Script SQL para la creacion de 6 vistas.
 
 ## Contribución
 
